@@ -7,8 +7,13 @@ from SaitamaRobot import (
     config_file,
     yaml,
     DEV_USERS,
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
+=======
+    OWNER_ID,
+    DRAGONS,
+>>>>>>> parent of b8806b4 (config.yaml)
     SUPPORT_CHAT,
     dispatcher,
 )
@@ -142,7 +147,15 @@ def supportlist(update: Update, context: CallbackContext):
 @whitelist_plus
 def devlist(update: Update, context: CallbackContext):
     bot = context.bot
+<<<<<<< HEAD
     true_dev = set(DEV_USERS).difference({OWNER_USERID})
+=======
+    m = update.effective_message.reply_text(
+        "<code>Gathering intel..</code>",
+        parse_mode=ParseMode.HTML,
+    )
+    true_dev = list(set(DEV_USERS) - {OWNER_ID})
+>>>>>>> parent of b8806b4 (config.yaml)
     reply = "<b>Hero Association Members ⚡️:</b>\n"
     for each_user in true_dev:
         user_id = each_user

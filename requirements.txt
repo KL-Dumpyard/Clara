@@ -1,7 +1,10 @@
 aiohttp>=2.2.5
+<<<<<<< HEAD
 ruamel.yaml
 markdown2
 more_itertools
+=======
+>>>>>>> parent of b8806b4 (config.yaml)
 alphabet_detector
 beautifulsoup4
 bleach
@@ -11,6 +14,8 @@ emoji
 feedparser
 future
 geopy
+git+https://github.com/starry69/python-markdown2.git
+#googletrans
 gpytranslate
 humanize
 jikanpy

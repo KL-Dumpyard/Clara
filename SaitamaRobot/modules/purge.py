@@ -2,9 +2,21 @@ import asyncio
 
 from more_itertools import chunked
 
+<<<<<<< HEAD
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import MessageDeleteForbidden
+=======
+from SaitamaRobot import DEMONS
+from SaitamaRobot import DEV_USERS
+from SaitamaRobot import DRAGONS
+from SaitamaRobot import OWNER_ID
+from SaitamaRobot import telethn
+from SaitamaRobot import TIGERS
+from SaitamaRobot import WOLVES
+from SaitamaRobot.modules.helper_funcs.telethn.chatstatus import can_delete_messages
+from SaitamaRobot.modules.helper_funcs.telethn.chatstatus import user_is_admin
+>>>>>>> parent of b8806b4 (config.yaml)
 
 from SaitamaRobot import pyrogram_app, PREFIX
 from SaitamaRobot.modules.helper_funcs.pyro.chatstatus import is_user_admin

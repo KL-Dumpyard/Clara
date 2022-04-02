@@ -12,8 +12,15 @@ from SaitamaRobot import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
+=======
+    OWNER_ID,
+    DRAGONS,
+    TIGERS,
+    WOLVES,
+>>>>>>> parent of b8806b4 (config.yaml)
     dispatcher,
 )
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
@@ -147,7 +154,7 @@ def del_fed(update: Update, context: CallbackContext):
         if getinfo is False:
             update.effective_message.reply_text("This federation does not exist.")
             return
-        if int(getinfo["owner"]) == int(user.id) or int(user.id) == OWNER_USERID:
+        if int(getinfo["owner"]) == int(user.id) or int(user.id) == OWNER_ID:
             fed_id = is_fed_id
         else:
             update.effective_message.reply_text("Only federation owners can do this!")
@@ -600,7 +607,7 @@ def fed_ban(update: Update, context: CallbackContext):
         message.reply_text("He is a federation admin, I can't fban him.")
         return
 
-    if user_id == OWNER_USERID:
+    if user_id == OWNER_ID:
         message.reply_text("Disaster level God cannot be fed banned!")
         return
 
@@ -1719,7 +1726,7 @@ def fed_import_bans(update: Update, context: CallbackContext):
                     if is_user_fed_admin(fed_id, import_userid) is True:
                         failed += 1
                         continue
-                    if str(import_userid) == str(OWNER_USERID):
+                    if str(import_userid) == str(OWNER_ID):
                         failed += 1
                         continue
                     if int(import_userid) in SUPPORT_USERS:
@@ -1791,7 +1798,7 @@ def fed_import_bans(update: Update, context: CallbackContext):
                     if is_user_fed_admin(fed_id, import_userid) is True:
                         failed += 1
                         continue
-                    if str(import_userid) == str(OWNER_USERID):
+                    if str(import_userid) == str(OWNER_ID):
                         failed += 1
                         continue
                     if int(import_userid) in SUPPORT_USERS:
@@ -2259,7 +2266,7 @@ def is_user_fed_admin(fed_id, user_id):
     fed_admins = sql.all_fed_users(fed_id)
     if fed_admins is False:
         return False
-    if int(user_id) in fed_admins or int(user_id) == OWNER_USERID:
+    if int(user_id) in fed_admins or int(user_id) == OWNER_ID:
         return True
     else:
         return False
@@ -2273,7 +2280,7 @@ def is_user_fed_owner(fed_id, user_id):
     if getfedowner is None or getfedowner is False:
         return False
     getfedowner = getfedowner["owner"]
-    if str(user_id) == getfedowner or int(user_id) == OWNER_USERID:
+    if str(user_id) == getfedowner or int(user_id) == OWNER_ID:
         return True
     else:
         return False

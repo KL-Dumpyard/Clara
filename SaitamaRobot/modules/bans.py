@@ -8,8 +8,16 @@ from telegram.utils.helpers import mention_html
 from SaitamaRobot import (
     DEV_USERS,
     LOGGER,
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
+=======
+    OWNER_ID,
+    DRAGONS,
+    DEMONS,
+    TIGERS,
+    WOLVES,
+>>>>>>> parent of b8806b4 (config.yaml)
     dispatcher,
 )
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
@@ -59,7 +67,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
-        if user_id == OWNER_USERID:
+        if user_id == OWNER_ID:
             message.reply_text("Trying to put me against a God level disaster huh?")
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against our own.")

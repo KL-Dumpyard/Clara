@@ -1,4 +1,5 @@
 import html
+<<<<<<< HEAD
 from contextlib import suppress
 from itertools import islice
 
@@ -7,6 +8,35 @@ from pyrogram.types import Message, MessageEntity, Chat, User
 from pyrogram.errors import UsernameNotOccupied, PeerIdInvalid
 
 from SaitamaRobot import PREFIX, DEV_USERS, pyrogram_app
+=======
+import os
+import re
+import subprocess
+
+import requests
+from telegram import MAX_MESSAGE_LENGTH
+from telegram import ParseMode
+from telegram import Update
+from telegram.error import BadRequest
+from telegram.ext import CallbackContext
+from telegram.ext import CommandHandler
+from telegram.utils.helpers import escape_markdown
+from telegram.utils.helpers import mention_html
+from telethon import events
+from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.types import ChannelParticipantsAdmins
+
+import SaitamaRobot.modules.sql.userinfo_sql as sql
+from SaitamaRobot import DEMONS
+from SaitamaRobot import DEV_USERS
+from SaitamaRobot import dispatcher
+from SaitamaRobot import DRAGONS
+from SaitamaRobot import INFOPIC
+from SaitamaRobot import OWNER_ID
+from SaitamaRobot import telethn as SaitamaTelethonClient
+from SaitamaRobot import TIGERS
+from SaitamaRobot import WOLVES
+>>>>>>> parent of b8806b4 (config.yaml)
 from SaitamaRobot.__main__ import STATS
 from SaitamaRobot.modules.sql import afk_sql
 
@@ -221,6 +251,47 @@ def info_text(user: User) -> str:
 
     return text
 
+<<<<<<< HEAD
+=======
+        afk_st = is_afk(user.id)
+        if afk_st:
+            text += _stext.format("AFK")
+        else:
+            status = status = bot.get_chat_member(chat.id, user.id).status
+            if status:
+                if status in {"left", "kicked"}:
+                    text += _stext.format("Not here")
+                elif status == "member":
+                    text += _stext.format("Detected")
+                elif status in {"administrator", "creator"}:
+                    text += _stext.format("Admin")
+
+    disaster_level_present = False
+
+    if user.id == OWNER_ID:
+        text += "\n\nThe Disaster level of this person is 'God'."
+        disaster_level_present = True
+    elif user.id in DEV_USERS:
+        text += "\n\nThis user is member of 'Hero Association'."
+        disaster_level_present = True
+    elif user.id in DRAGONS:
+        text += "\n\nThe Disaster level of this person is 'Dragon'."
+        disaster_level_present = True
+    elif user.id in DEMONS:
+        text += "\n\nThe Disaster level of this person is 'Demon'."
+        disaster_level_present = True
+    elif user.id in TIGERS:
+        text += "\n\nThe Disaster level of this person is 'Tiger'."
+        disaster_level_present = True
+    elif user.id in WOLVES:
+        text += "\n\nThe Disaster level of this person is 'Wolf'."
+        disaster_level_present = True
+
+    if disaster_level_present:
+        text += ' [<a href="https://t.me/OnePunchUpdates/155">?</a>]'.format(
+            bot.username
+        )
+>>>>>>> parent of b8806b4 (config.yaml)
 
 @pyrogram_app.on_message(filters.command("info", PREFIX))
 async def info(client: Client, msg: Message) -> None:

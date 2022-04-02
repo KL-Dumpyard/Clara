@@ -27,6 +27,14 @@ from telegram.utils.helpers import mention_html
 from telegram.utils.helpers import mention_markdown
 
 from SaitamaRobot import dispatcher
+<<<<<<< HEAD
+=======
+from SaitamaRobot import DRAGONS
+from SaitamaRobot import OWNER_ID
+from SaitamaRobot import TIGERS
+from SaitamaRobot import TOKEN
+from SaitamaRobot import WOLVES
+>>>>>>> parent of b8806b4 (config.yaml)
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from SaitamaRobot.modules.helper_funcs.alternate import typing_action
 

@@ -10,8 +10,16 @@ import SaitamaRobot
 from SaitamaRobot import (
     DEV_USERS,
     LOGGER,
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
+=======
+    OWNER_ID,
+    DRAGONS,
+    DEMONS,
+    TIGERS,
+    WOLVES,
+>>>>>>> parent of b8806b4 (config.yaml)
     dispatcher,
     JOIN_LOGGER,
 )
@@ -184,7 +192,7 @@ def new_member(update: Update, context: CallbackContext):
                 reply = False
 
             # Give the owner a special welcome
-            if new_mem.id == OWNER_USERID:
+            if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
                     "Oh, Genos? Let's get this moving.",
                     reply_to_message_id=reply,
@@ -547,7 +555,7 @@ def left_member(update: Update, context: CallbackContext):
                 return
 
             # Give the owner a special goodbye
-            if left_mem.id == OWNER_USERID:
+            if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
                     "Oi! Genos! He left..",
                     reply_to_message_id=reply,
