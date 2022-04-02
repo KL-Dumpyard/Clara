@@ -5,6 +5,7 @@ from sys import argv
 from typing import Optional
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -66,6 +67,26 @@ from telegram.ext import MessageHandler
 from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 
+=======
+from telegram import InlineKeyboardButton
+from telegram import InlineKeyboardMarkup
+from telegram import ParseMode
+from telegram import Update
+from telegram.error import BadRequest
+from telegram.error import ChatMigrated
+from telegram.error import NetworkError
+from telegram.error import TelegramError
+from telegram.error import TimedOut
+from telegram.error import Unauthorized
+from telegram.ext import CallbackContext
+from telegram.ext import CallbackQueryHandler
+from telegram.ext import CommandHandler
+from telegram.ext import Filters
+from telegram.ext import MessageHandler
+from telegram.ext.dispatcher import DispatcherHandlerStop
+from telegram.utils.helpers import escape_markdown
+
+>>>>>>> parent of b8806b4 (config.yaml)
 from SaitamaRobot import ALLOW_EXCL
 from SaitamaRobot import CERT_PATH
 from SaitamaRobot import dispatcher
@@ -80,6 +101,9 @@ from SaitamaRobot import TOKEN
 from SaitamaRobot import updater
 from SaitamaRobot import URL
 from SaitamaRobot import WEBHOOK
+<<<<<<< HEAD
+>>>>>>> parent of b8806b4 (config.yaml)
+=======
 >>>>>>> parent of b8806b4 (config.yaml)
 from SaitamaRobot.modules import ALL_MODULES
 from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
@@ -141,6 +165,7 @@ And the following:
 SAITAMA_IMG = "https://telegra.ph/file/0576731c890d2cf9cecce.jpg"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if DONATION_LINK:
     DONATE_STRING = (
         f"You can donate to the person currently running me [here]({DONATION_LINK})"
@@ -148,6 +173,9 @@ if DONATION_LINK:
 else:
     DONATE_STRING = """Won't be necessary for now."""
 
+=======
+DONATE_STRING = """ Won't be necessary as of now."""
+>>>>>>> parent of b8806b4 (config.yaml)
 =======
 DONATE_STRING = """ Won't be necessary as of now."""
 >>>>>>> parent of b8806b4 (config.yaml)
@@ -739,6 +767,10 @@ def main():
 if __name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    telethn.start(bot_token=TOKEN)
+>>>>>>> parent of b8806b4 (config.yaml)
 =======
     telethn.start(bot_token=TOKEN)
 >>>>>>> parent of b8806b4 (config.yaml)

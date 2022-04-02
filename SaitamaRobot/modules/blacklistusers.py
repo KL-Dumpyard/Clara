@@ -4,9 +4,12 @@ import SaitamaRobot.modules.sql.blacklistusers_sql as sql
 from SaitamaRobot import (
     DEV_USERS,
 <<<<<<< HEAD
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
 =======
+=======
+>>>>>>> parent of b8806b4 (config.yaml)
     OWNER_ID,
     DRAGONS,
     DEMONS,
@@ -27,7 +30,12 @@ from telegram.ext import CallbackContext, CommandHandler
 from telegram.utils.helpers import mention_html
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 BLACKLISTWHITELIST = DEV_USERS | SUPPORT_USERS
+=======
+BLACKLISTWHITELIST = [OWNER_ID] + DEV_USERS + DRAGONS + WOLVES + DEMONS
+BLABLEUSERS = [OWNER_ID] + DEV_USERS
+>>>>>>> parent of b8806b4 (config.yaml)
 =======
 BLACKLISTWHITELIST = [OWNER_ID] + DEV_USERS + DRAGONS + WOLVES + DEMONS
 BLABLEUSERS = [OWNER_ID] + DEV_USERS

@@ -46,10 +46,14 @@ def get_user_common_chats(update: Update, context: CallbackContext):
 
 COMMON_CHATS_HANDLER = CommandHandler(
 <<<<<<< HEAD
+<<<<<<< HEAD
     "getchats",
     get_user_common_chats,
     filters=Filters.user(OWNER_USERID),
     run_async=True,
+=======
+    "getchats", get_user_common_chats, filters=Filters.user(OWNER_ID), run_async=True
+>>>>>>> parent of b8806b4 (config.yaml)
 =======
     "getchats", get_user_common_chats, filters=Filters.user(OWNER_ID), run_async=True
 >>>>>>> parent of b8806b4 (config.yaml)

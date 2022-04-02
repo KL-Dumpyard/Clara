@@ -1,13 +1,19 @@
 # Config files, logs and stuff
 <<<<<<< HEAD
+<<<<<<< HEAD
 config.yaml
 =======
+=======
+>>>>>>> parent of b8806b4 (config.yaml)
 SaitamaRobot/modules/helper_funcs/temp.txt
 SaitamaRobot/elevated_users.json
 SaitamaRobot/config.py
 SaitamaRobot/config.ini
 log.txt
 logfile
+<<<<<<< HEAD
+>>>>>>> parent of b8806b4 (config.yaml)
+=======
 >>>>>>> parent of b8806b4 (config.yaml)
 kangsticker.png
 log.txt
@@ -17,8 +23,11 @@ start_service.bat
 
 # Session files
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.session*
 =======
+=======
+>>>>>>> parent of b8806b4 (config.yaml)
 SaitamaRobot/*.session
 SaitamaRobot/*.session-journal
 saitama.session-journal

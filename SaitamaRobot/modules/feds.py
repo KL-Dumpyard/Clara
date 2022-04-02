@@ -13,9 +13,12 @@ from SaitamaRobot import (
     LOGGER,
     SUPPORT_CHAT,
 <<<<<<< HEAD
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
 =======
+=======
+>>>>>>> parent of b8806b4 (config.yaml)
     OWNER_ID,
     DRAGONS,
     TIGERS,
@@ -1727,6 +1730,12 @@ def fed_import_bans(update: Update, context: CallbackContext):
                         failed += 1
                         continue
                     if str(import_userid) == str(OWNER_ID):
+<<<<<<< HEAD
+=======
+                        failed += 1
+                        continue
+                    if int(import_userid) in DRAGONS:
+>>>>>>> parent of b8806b4 (config.yaml)
                         failed += 1
                         continue
                     if int(import_userid) in SUPPORT_USERS:
@@ -1799,6 +1808,15 @@ def fed_import_bans(update: Update, context: CallbackContext):
                         failed += 1
                         continue
                     if str(import_userid) == str(OWNER_ID):
+<<<<<<< HEAD
+=======
+                        failed += 1
+                        continue
+                    if int(import_userid) in DRAGONS:
+                        failed += 1
+                        continue
+                    if int(import_userid) in TIGERS:
+>>>>>>> parent of b8806b4 (config.yaml)
                         failed += 1
                         continue
                     if int(import_userid) in SUPPORT_USERS:

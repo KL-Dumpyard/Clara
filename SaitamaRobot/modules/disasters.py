@@ -8,9 +8,12 @@ from SaitamaRobot import (
     yaml,
     DEV_USERS,
 <<<<<<< HEAD
+<<<<<<< HEAD
     OWNER_USERID,
     SUPPORT_USERS,
 =======
+=======
+>>>>>>> parent of b8806b4 (config.yaml)
     OWNER_ID,
     DRAGONS,
 >>>>>>> parent of b8806b4 (config.yaml)
@@ -155,6 +158,9 @@ def devlist(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
+<<<<<<< HEAD
+>>>>>>> parent of b8806b4 (config.yaml)
+=======
 >>>>>>> parent of b8806b4 (config.yaml)
     reply = "<b>Hero Association Members ⚡️:</b>\n"
     for each_user in true_dev:
